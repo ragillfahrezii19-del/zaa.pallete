@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zaa.palette — Makeup Artist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">zaa.palette</a>
+
+    <nav>
+      <a href="#layanan">Layanan</a>
+      <a href="#portfolio">Portofolio</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#pesan">Pesan</a>
+    </nav>
+
+    <button class="menu-btn" aria-label="Buka menu">☰</button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">MAKEUP ARTIST • BEAUTY • EVENT</p>
+
+        <h1>Your Beauty, <br><em>Perfectly Defined.</em></h1>
+
+        <p class="hero-text">
+          Makeup artist untuk pesta,dan photoshoot.
+          Hasil natural, nyaman dipakai, dan tahan dari pagi sampai malam.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#pesan" class="btn btn-primary">Pesan jadwal</a>
+          <a href="#portfolio" class="btn btn-outline">Lihat hasil kerja</a>
+        </div>
+      </div>
+
+      <div class="hero-decoration">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+    </section>
+
+    <!-- LAYANAN -->
+    <section id="layanan" class="section services">
+      <div class="section-heading">
+        <p class="eyebrow">LAYANAN</p>
+        <h2>Makeup untuk momen<br>yang ingin Anda ingat.</h2>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <span class="number">01</span>
+          <h3>Party Makeup</h3>
+          <p>Look elegan dan fresh untuk pesta, ulang tahun, dinner, atau acara spesial.</p>
+        </article>
+
+
+        <article class="service-card featured">
+          <span class="number">03</span>
+          <h3>Photoshoot</h3>
+          <p>Look yang disesuaikan dengan konsep, outfit, lighting, dan karakter Anda.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PORTO -->
+    <section id="portfolio" class="section portfolio">
+
+    <div class="section-heading">
+        <p class="eyebrow">PORTOFOLIO</p>
+        <h2>Beberapa look<br>yang pernah kami buat.</h2>
+    </div>
+
+    <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+            <img src="images/Photoshoot.jpg" alt="Makeup 1">
+        </div>
+
+        <div class="portfolio-item">
+            <img src="images/Photo2.jpg" alt="Makeup 2">
+        </div>
+
+        <div class="portfolio-item">
+            <img src="images/Photo3.jpg" alt="Makeup 3">
+        </div>
+
+    </div>
+
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="section about">
+      <div class="about-box">
+        <div>
+          <p class="eyebrow">TENTANG ZAA.PALETTE</p>
+          <h2>Natural, personal,<br>dan tetap jadi diri sendiri.</h2>
+        </div>
+        <p>
+          Kami percaya makeup bukan untuk mengubah siapa Anda.
+          Makeup adalah cara untuk menonjolkan fitur terbaik dan membuat
+          Anda merasa lebih percaya diri di hari yang spesial.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA / PESAN -->
+    <section id="pesan" class="booking">
+      <div>
+        <p class="eyebrow">SIAP UNTUK TAMPIL CANTIK?</p>
+        <h2>Yuk, tentukan look<br>terbaik Anda.</h2>
+      </div>
+
+      <a class="btn btn-light" href="https://wa.me/6287711457788" target="_blank">
+        Chat WhatsApp →
+      </a>
+      <a class="btn btn-outline" href="https://www.instagram.com/zaa.palette/" target="_blank">
+        Lihat Instagram →
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 zaa.palette</span>
+    <span>Makeup Artist • Indonesia</span>
+  </footer>
+
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const nav = document.querySelector('nav');
+
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
