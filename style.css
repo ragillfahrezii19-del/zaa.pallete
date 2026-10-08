@@ -9,13 +9,13 @@
 }
 
 :root {
-  --wine: #300c28;
-  --wine-dark: #22071c;
-  --pink: #b52958;
-  --pink-light: #e58b9d;
-  --cream: #f8e8eb;
-  --muted: #d9bdc9;
-  --white: #fff8fa;
+  --wine: #1C0B12;
+  --wine-dark: #42121F;
+  --pink: #721D35;
+  --pink-light: #B9857C;
+  --cream: #EFE1CE;
+  --muted: #D8C0B2;
+  --white: #EFE1CE;
   --max: 1400px;
 }
 
@@ -498,7 +498,12 @@ nav a:hover {
 ========================================================= */
 
 .pricelist {
-  background: var(--wine);
+  background-color: var(--wine);
+  background-image: linear-gradient(rgba(28, 11, 18, 0.78), rgba(28, 11, 18, 0.88)), url("images/Photo2pt.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 
   padding: 100px 5vw 110px;
 
@@ -1067,6 +1072,8 @@ footer {
 
   .pricelist {
     padding: 70px 20px 80px;
+    background-position: center center;
+    background-attachment: scroll;
   }
 
   .pricelist .section-heading {
