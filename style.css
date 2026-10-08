@@ -37,9 +37,7 @@ img {
   max-width: 100%;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR*/
 .navbar {
   position: relative;
   height: 88px;
@@ -195,7 +193,7 @@ h2 {
   border-radius: 50%;
 }
 
-.blob-1 {
+.blobob-1 {
   width: 170px;
   height: 170px;
   background: #b52b59;
@@ -203,7 +201,7 @@ h2 {
   bottom: -80px;
 }
 
-.blob-2 {
+.blobob-2 {
   width: 200px;
   height: 200px;
   background: #e48b9c;
@@ -211,7 +209,7 @@ h2 {
   bottom: -80px;
 }
 
-.blob-3 {
+.blobob-3 {
   width: 140px;
   height: 140px;
   background: #d8a44d;
@@ -219,9 +217,8 @@ h2 {
   bottom: -55px;
 }
 
-/* =========================
-   SERVICES
-========================= */
+/*SERVICES*/
+
 .services {
   background: #f8e9ed;
   padding: 100px 4.5% 120px;
@@ -416,9 +413,7 @@ footer {
   font-size: 14px;
 }
 
-/* =========================
-   TABLET
-========================= */
+/* TABLET */
 @media (max-width: 900px) {
   .navbar {
     height: 76px;
@@ -492,9 +487,7 @@ footer {
   }
 }
 
-/* =========================
-   PHONE
-========================= */
+/* PHONE */
 @media (max-width: 600px) {
   .navbar {
     height: 72px;
