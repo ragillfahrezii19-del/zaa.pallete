@@ -1,3 +1,7 @@
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +21,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -28,25 +31,60 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
+button {
+  font-family: inherit;
 }
 
-/* NAVBAR*/
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: clamp(42px, 5vw, 72px);
+  letter-spacing: -2px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  color: var(--pink-light);
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
 .navbar {
-  position: relative;
   height: 88px;
   max-width: var(--max);
   margin: auto;
   padding: 0 5vw;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
   z-index: 100;
 }
 
@@ -65,7 +103,9 @@ nav {
 }
 
 nav a {
-  transition: opacity .2s, color .2s;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
 }
 
 nav a:hover {
@@ -74,50 +114,41 @@ nav a:hover {
 
 .menu-btn {
   display: none;
+
   border: 0;
   background: transparent;
   color: var(--cream);
+
   font-size: 28px;
-  line-height: 1;
   cursor: pointer;
-  padding: 8px;
 }
 
-/* GENERAL */
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
 .section {
   max-width: var(--max);
   margin: auto;
   padding: 130px 5vw;
 }
 
-.eyebrow {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 18px;
-  color: var(--pink-light);
-}
 
-h1,
-h2,
-h3 {
-  font-family: "Playfair Display", serif;
-  line-height: 1.05;
-}
+/* =========================================================
+   HERO
+========================================================= */
 
-h2 {
-  font-size: clamp(42px, 5vw, 72px);
-  letter-spacing: -2px;
-}
-
-/* HERO */
 .hero {
   min-height: calc(100vh - 88px);
   max-width: var(--max);
   margin: auto;
+
   padding: 70px 5vw 120px;
+
   display: flex;
   align-items: center;
+
   position: relative;
   overflow: hidden;
 }
@@ -140,9 +171,12 @@ h2 {
 
 .hero-text {
   max-width: 680px;
+
   color: var(--muted);
+
   font-size: 20px;
   line-height: 1.7;
+
   margin-bottom: 42px;
 }
 
@@ -156,12 +190,18 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   min-height: 62px;
   padding: 0 38px;
+
   border-radius: 100px;
+
   font-size: 17px;
   font-weight: 700;
-  transition: transform .2s, background .2s;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .btn:hover {
@@ -182,6 +222,11 @@ h2 {
   color: var(--wine);
 }
 
+
+/* =========================================================
+   HERO DECORATION
+========================================================= */
+
 .hero-decoration {
   position: absolute;
   inset: 0;
@@ -193,34 +238,45 @@ h2 {
   border-radius: 50%;
 }
 
-.blobob-1 {
+.blob-1 {
   width: 170px;
   height: 170px;
-  background: #b52b59;
+
+  background: var(--pink);
+
   right: 24%;
   bottom: -80px;
 }
 
-.blobob-2 {
+.blob-2 {
   width: 200px;
   height: 200px;
-  background: #e48b9c;
+
+  background: var(--pink-light);
+
   right: 7%;
   bottom: -80px;
 }
 
-.blobob-3 {
+.blob-3 {
   width: 140px;
   height: 140px;
+
   background: #d8a44d;
+
   right: -20px;
   bottom: -55px;
 }
 
-/*SERVICES*/
+
+/* =========================================================
+   SERVICES
+========================================================= */
 
 .services {
-  background: #f8e9ed;
+  background: var(--cream);
+  color: var(--wine);
+
   padding: 100px 4.5% 120px;
 }
 
@@ -230,7 +286,9 @@ h2 {
 
 .services .section-heading .eyebrow {
   margin: 0 0 30px;
-  color: #bd2859;
+
+  color: var(--pink);
+
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -238,47 +296,69 @@ h2 {
 
 .services .section-heading h2 {
   margin: 0;
-  color: #300c28;
+
+  color: var(--wine);
+
   font-size: clamp(55px, 6vw, 92px);
-  line-height: .98;
+  line-height: 0.98;
   font-weight: 400;
 }
 
 .service-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 32px;
   width: 100%;
 }
 
 .service-card {
   position: relative;
+
   width: 100%;
-  min-height: 520px;
+  height: 520px;
+
   padding: 40px;
+
   border-radius: 28px;
-  border: 1px solid rgba(48, 12, 40, .15);
+  border: 1px solid rgba(48, 12, 40, 0.15);
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   overflow: hidden;
-  background: #f8e9ed;
-  color: #300c28;
-  transition: transform .3s ease, box-shadow .3s ease;
+
+  background: var(--cream);
+  color: var(--wine);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
 }
 
 .service-card .number {
   display: block;
+
   margin: 0;
-  color: #300c28;
+
+  color: var(--wine);
+
   font-size: 18px;
   font-weight: 700;
 }
 
 .service-card h3 {
   display: block;
+
   margin: 0 0 16px;
-  color: #300c28;
+
+  color: var(--wine);
+
   font-size: 42px;
   line-height: 1.1;
   font-weight: 400;
@@ -286,34 +366,45 @@ h2 {
 
 .service-card p {
   display: block;
+
   margin: 0;
+
   max-width: 450px;
+
   color: #5d4057;
+
   font-size: 18px;
   line-height: 1.6;
 }
 
 .service-card.featured {
-  background: #bd2859;
-  border-color: #bd2859;
-  color: #fff;
+  background: var(--pink);
+  border-color: var(--pink);
+
+  color: white;
 }
 
 .service-card.featured .number,
 .service-card.featured h3,
 .service-card.featured p {
-  color: #fff;
+  color: white;
 }
 
-.service-card:hover {
+.service-card.featured:hover {
   transform: translateY(-5px);
 }
 
-/*PORTFOLIO */
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
+
 .portfolio {
-  background: #300c28;
+  background: var(--wine);
+
   padding: 100px 4.5% 120px;
-  color: #fff;
+
+  color: var(--white);
 }
 
 .portfolio .section-heading {
@@ -321,118 +412,332 @@ h2 {
 }
 
 .portfolio .section-heading .eyebrow {
-  color: #e98aa5;
+  color: var(--pink-light);
 }
 
 .portfolio .section-heading h2 {
-  color: #fff;
+  color: var(--white);
   margin: 0;
 }
 
 .portfolio-grid {
   display: grid;
+
   grid-template-columns: repeat(3, minmax(0, 1fr));
+
   gap: 28px;
+
   width: 100%;
 }
 
 .portfolio-item {
   position: relative;
+
   width: 100%;
-  aspect-ratio: 4 / 5;
   min-width: 0;
+
+  aspect-ratio: 4 / 5;
+
   overflow: hidden;
+
   border-radius: 28px;
 }
 
 .portfolio-item img {
   display: block;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center;
+
+  transition: transform 0.4s ease;
 }
 
-/* ABOUT */
+.portfolio-item:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
 .about {
-  background: #f1dfe4;
+  background: var(--cream);
+
   color: var(--wine);
+
   max-width: none;
+
   padding-left: max(5vw, calc((100% - var(--max)) / 2));
   padding-right: max(5vw, calc((100% - var(--max)) / 2));
 }
 
 .about-box {
   display: grid;
-  grid-template-columns: 1.2fr .8fr;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
   align-items: center;
+
   gap: 80px;
 }
 
 .about-box > p {
   font-size: 21px;
   line-height: 1.8;
-  color: #67364e;
+
+  color: var(--wine);
 }
 
-/* BOOKING*/
+
+/* =========================================================
+   PRICE LIST
+========================================================= */
+
+.pricelist {
+  background: var(--wine);
+
+  padding: 100px 5vw 110px;
+
+  color: var(--cream);
+}
+
+.pricelist .section-heading {
+  margin-bottom: 46px;
+}
+
+.pricelist .section-heading h2 {
+  max-width: 850px;
+}
+
+.pricelist-intro {
+  margin-top: 20px;
+
+  max-width: 560px;
+
+  color: var(--muted);
+
+  font-size: 18px;
+}
+
+.price-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+
+  align-items: stretch;
+}
+
+.price-card {
+  padding: 30px 26px;
+
+  border: 1px solid rgba(248, 232, 235, 0.18);
+
+  border-radius: 22px;
+
+  background: rgba(34, 7, 28, 0.72);
+
+  min-width: 0;
+}
+
+.price-card-featured {
+  background: var(--pink);
+
+  border-color: var(--pink-light);
+
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12);
+}
+
+.price-card-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  min-height: 82px;
+
+  margin-bottom: 24px;
+}
+
+.price-number {
+  flex-shrink: 0;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  padding: 5px 8px;
+
+  border: 1px solid currentColor;
+
+  border-radius: 6px;
+
+  opacity: 0.8;
+}
+
+.price-card h3 {
+  font-size: clamp(22px, 2vw, 29px);
+
+  line-height: 1.2;
+}
+
+.price-card-heading p {
+  font-size: 14px;
+
+  margin-top: 5px;
+
+  color: var(--cream);
+}
+
+.price-items {
+  list-style: none;
+}
+
+.price-items li {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 17px 0;
+
+  border-top: 1px solid rgba(248, 232, 235, 0.15);
+
+  font-size: 15px;
+}
+
+.price-items li span {
+  color: var(--cream);
+}
+
+.price-items li strong {
+  color: var(--white);
+
+  white-space: nowrap;
+
+  text-align: right;
+
+  font-size: 14px;
+}
+
+.price-notes {
+  margin-top: 34px;
+
+  padding: 24px 28px;
+
+  border-radius: 18px;
+
+  background: rgba(0, 0, 0, 0.14);
+
+  border-left: 3px solid var(--pink-light);
+}
+
+.price-notes h3 {
+  font-size: 23px;
+
+  margin-bottom: 10px;
+}
+
+.price-notes ul {
+  padding-left: 20px;
+
+  color: var(--cream);
+}
+
+.price-notes li + li {
+  margin-top: 5px;
+}
+
+.price-booking {
+  margin-top: 28px;
+}
+
+
+/* =========================================================
+   BOOKING
+========================================================= */
+
 .booking {
   max-width: var(--max);
+
   margin: auto;
+
   padding: 130px 5vw;
+
   display: flex;
+
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
 
-.booking > div {
-  flex: 1 1 500px;
-  min-width: 0;
+  gap: 40px;
 }
 
 .booking h2 {
   font-size: clamp(50px, 6vw, 90px);
 }
 
-.booking .btn {
-  flex: 0 0 auto;
-}
 
-/* FOOTER*/
+/* =========================================================
+   FOOTER
+========================================================= */
+
 footer {
-  border-top: 1px solid rgba(248, 232, 235, .16);
+  border-top: 1px solid rgba(248, 232, 235, 0.16);
+
   max-width: var(--max);
+
   margin: auto;
+
   padding: 30px 5vw;
+
   display: flex;
+
   justify-content: space-between;
-  gap: 12px;
+
   color: var(--muted);
+
   font-size: 14px;
 }
 
-/* TABLET */
+
+/* =========================================================
+   TABLET
+========================================================= */
+
 @media (max-width: 900px) {
-  .navbar {
-    height: 76px;
-  }
+
+  /* NAVBAR */
 
   nav {
     display: none;
+
     position: absolute;
-    top: 68px;
+
+    top: 75px;
+
     right: 5vw;
     left: 5vw;
+
     padding: 25px;
+
     background: var(--wine-dark);
+
     border-radius: 18px;
+
     flex-direction: column;
-    align-items: flex-start;
+
     gap: 18px;
-    z-index: 1000;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, .25);
+
+    z-index: 100;
   }
 
   nav.show {
@@ -443,8 +748,12 @@ footer {
     display: block;
   }
 
+
+  /* HERO */
+
   .hero {
     min-height: auto;
+
     padding-top: 80px;
     padding-bottom: 180px;
   }
@@ -453,44 +762,103 @@ footer {
     letter-spacing: -3px;
   }
 
+
+  /* SERVICES */
+
+  .services {
+    padding: 80px 5% 100px;
+  }
+
+  .services .section-heading h2 {
+    font-size: clamp(48px, 7vw, 70px);
+  }
+
   .service-grid {
     grid-template-columns: 1fr;
+
     gap: 24px;
   }
 
   .service-card {
-    min-height: 460px;
+    height: 460px;
+  }
+
+
+  /* PORTFOLIO */
+
+  .portfolio {
+    padding: 80px 5% 90px;
   }
 
   .portfolio-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
     gap: 20px;
   }
 
   .portfolio-item {
+    aspect-ratio: 4 / 5;
+
     border-radius: 22px;
   }
 
-  .portfolio-item.tall,
-  .portfolio-item.wide {
-    grid-column: auto;
-    grid-row: auto;
+
+  /* PRICE LIST */
+
+  .pricelist {
+    padding: 80px 5% 90px;
   }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  /* ABOUT */
 
   .about-box {
     grid-template-columns: 1fr;
+
     gap: 40px;
   }
 
+
+  /* BOOKING */
+
   .booking {
+    flex-direction: column;
+
     align-items: flex-start;
   }
 }
 
-/* PHONE */
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 600px) {
+
+  /* GLOBAL */
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+
+  /* NAVBAR */
+
   .navbar {
     height: 72px;
+
     padding: 0 20px;
   }
 
@@ -499,86 +867,84 @@ footer {
   }
 
   nav {
-    top: 66px;
+    top: 72px;
+
     right: 20px;
     left: 20px;
+
+    padding: 22px;
+
+    border-radius: 16px;
   }
 
-  .section {
-    padding: 90px 20px;
-  }
 
   /* HERO */
+
   .hero {
-    width: 100%;
     min-height: auto;
+
     padding: 55px 20px 150px;
-    align-items: flex-start;
-  }
-
-  .hero-content {
-    width: 100%;
-  }
-
-  .hero .eyebrow {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    margin-bottom: 16px;
   }
 
   .hero h1 {
-    max-width: 100%;
-    font-size: clamp(48px, 14vw, 64px);
-    line-height: .98;
+    font-size: 60px;
+
     letter-spacing: -2px;
-    margin-bottom: 25px;
+
+    margin-bottom: 26px;
   }
 
   .hero-text {
-    max-width: 100%;
-    font-size: 16px;
+    font-size: 17px;
+
     line-height: 1.65;
-    margin-bottom: 30px;
+
+    margin-bottom: 32px;
   }
 
   .hero-buttons {
     width: 100%;
-    gap: 12px;
-  }
 
-  .hero-buttons .btn {
-    width: 100%;
+    flex-direction: column;
+
+    gap: 12px;
   }
 
   .btn {
     width: 100%;
-    min-height: 56px;
+
+    min-height: 58px;
+
     padding: 0 24px;
-    font-size: 16px;
   }
 
   .blob-1 {
     width: 110px;
     height: 110px;
-    right: 35%;
+
+    right: 30%;
     bottom: -55px;
   }
 
   .blob-2 {
     width: 130px;
     height: 130px;
-    right: 5%;
+
+    right: 3%;
     bottom: -55px;
   }
 
   .blob-3 {
     width: 90px;
     height: 90px;
-    right: -20px;
+
+    right: -30px;
     bottom: -35px;
   }
 
+
   /* SERVICES */
+
   .services {
     padding: 70px 20px 80px;
   }
@@ -589,25 +955,29 @@ footer {
 
   .services .section-heading .eyebrow {
     margin-bottom: 20px;
+
     font-size: 14px;
   }
 
   .services .section-heading h2 {
-    font-size: clamp(40px, 12vw, 52px);
+    font-size: 48px;
+
     line-height: 1;
-    letter-spacing: -1.5px;
   }
 
   .service-grid {
     grid-template-columns: 1fr;
+
     gap: 20px;
   }
 
   .service-card {
     width: 100%;
-    min-height: 420px;
-    height: auto;
+
+    height: 420px;
+
     padding: 30px;
+
     border-radius: 24px;
   }
 
@@ -619,7 +989,9 @@ footer {
     font-size: 16px;
   }
 
+
   /* PORTFOLIO */
+
   .portfolio {
     padding: 70px 20px 80px;
   }
@@ -629,38 +1001,50 @@ footer {
   }
 
   .portfolio .section-heading h2 {
-    font-size: clamp(40px, 12vw, 50px);
-    line-height: .98;
-    letter-spacing: -1.5px;
+    font-size: 42px;
+
+    line-height: 0.98;
   }
 
   .portfolio-grid {
     display: grid;
+
     grid-template-columns: 1fr;
-    gap: 24px;
+
+    gap: 20px;
+
     width: 100%;
+
     margin-top: 0;
   }
 
-  .portfolio-item,
-  .portfolio-item.tall,
-  .portfolio-item.wide {
+  .portfolio-item {
+    position: relative;
+
     width: 100%;
     height: auto;
+
     aspect-ratio: 3 / 4;
-    grid-column: auto;
-    grid-row: auto;
+
+    min-height: 0;
+
+    overflow: hidden;
+
     border-radius: 20px;
   }
 
   .portfolio-item img {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: cover;
   }
 
+
   /* ABOUT */
+
   .about {
     padding-left: 20px;
     padding-right: 20px;
@@ -668,50 +1052,126 @@ footer {
 
   .about-box {
     grid-template-columns: 1fr;
-    gap: 30px;
-  }
 
-  .about-box h2 {
-    font-size: clamp(40px, 12vw, 52px);
-    letter-spacing: -1.5px;
+    gap: 30px;
   }
 
   .about-box > p {
     font-size: 17px;
+
     line-height: 1.7;
   }
 
-  /* BOOKING */
-  .booking {
-    width: 100%;
-    padding: 80px 20px 90px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
+
+  /* PRICE LIST */
+
+  .pricelist {
+    padding: 70px 20px 80px;
   }
 
-  .booking > div {
-    flex: none;
+  .pricelist .section-heading {
+    margin-bottom: 38px;
+  }
+
+  .pricelist .section-heading h2 {
+    max-width: 100%;
+
+    font-size: 42px;
+
+    line-height: 1;
+  }
+
+  .pricelist-intro {
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+  .price-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
     width: 100%;
-    margin-bottom: 16px;
+  }
+
+  .price-card {
+    width: 100%;
+
+    padding: 26px 22px;
+
+    border-radius: 20px;
+  }
+
+  .price-card-heading {
+    min-height: auto;
+
+    margin-bottom: 20px;
+
+    gap: 12px;
+  }
+
+  .price-card h3 {
+    font-size: 25px;
+  }
+
+  .price-card-heading p {
+    font-size: 13px;
+  }
+
+  .price-items li {
+    gap: 10px;
+
+    padding: 15px 0;
+
+    font-size: 14px;
+  }
+
+  .price-items li strong {
+    font-size: 13px;
+  }
+
+  .price-notes {
+    padding: 20px;
+
+    margin-top: 24px;
+
+    border-radius: 16px;
+  }
+
+  .price-notes h3 {
+    font-size: 20px;
+  }
+
+
+  /* BOOKING */
+
+  .booking {
+    padding: 90px 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 30px;
   }
 
   .booking h2 {
-    font-size: clamp(42px, 12vw, 54px);
-    letter-spacing: -1.5px;
+    font-size: 48px;
+
+    line-height: 1;
   }
 
-  .booking .btn {
-    width: 100%;
-  }
 
   /* FOOTER */
+
   footer {
-    width: 100%;
     padding: 25px 20px;
+
     flex-direction: column;
-    gap: 6px;
-    font-size: 13px;
+
+    gap: 8px;
   }
 }
